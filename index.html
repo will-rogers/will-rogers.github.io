@@ -90,7 +90,6 @@ title: Home
       {% endfor %}
     </div>
 
-    <div class="tab-content">
     <div class="tab-pane" id="papers-published">
       {% assign published_papers = site.data.publications.papers | where: "published", "y" %}
       {% for paper in published_papers %}
@@ -120,7 +119,6 @@ title: Home
       {% endfor %}
     </div>
 
-    <div class="tab-content">
     <div class="tab-pane" id="papers-review">
       {% assign review_papers = site.data.publications.papers | where: "review", "y" %}
       {% for paper in review_papers %}
@@ -150,7 +148,6 @@ title: Home
       {% endfor %}
     </div>
 
-    <div class="tab-content">
     <div class="tab-pane" id="papers-preprint">
       {% assign preprint_papers = site.data.publications.papers | where: "preprint", "y" %}
       {% for paper in preprint_papers %}
