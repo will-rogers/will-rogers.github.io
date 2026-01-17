@@ -62,7 +62,7 @@ title: Home
 
   <div class="tab-content">
     <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", y %}
+      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
       {% for paper in selected_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -91,7 +91,7 @@ title: Home
     </div>
 
     <div class="tab-pane" id="papers-published">
-      {% assign published_papers = site.data.publications.papers | where: "published", y %}
+      {% assign published_papers = site.data.publications.papers | where: "published", "y" %}
       {% for paper in published_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -120,7 +120,7 @@ title: Home
     </div>
 
     <div class="tab-pane" id="papers-review">
-      {% assign review_papers = site.data.publications.papers | where: "review", y %}
+      {% assign review_papers = site.data.publications.papers | where: "review", "y" %}
       {% for paper in review_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -149,7 +149,7 @@ title: Home
     </div>
 
     <div class="tab-pane" id="papers-preprint">
-      {% assign preprint_papers = site.data.publications.papers | where: "preprint", y %}
+      {% assign preprint_papers = site.data.publications.papers | where: "preprint", "y" %}
       {% for paper in preprint_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
