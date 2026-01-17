@@ -5,49 +5,49 @@ papers:
     venue: "Ecology Letters. 2025."
     doi: "https://doi.org/10.1111/ele.70279"
     code: "https://github.com/will-rogers/SSD_Paper_Code"
-    paper_pdf: "/portfolio/assets/publications/Rogers et al. 2025.pdf"
+    paper_pdf: "/assets/publications/Rogers et al. 2025.pdf"
     Published: y
 
   - title: "A theoretical framework for scaling ecological niches from individuals to species"
     authors: "Muyang Lu, Scott Yanco, Ben Carlson, Kevin Winner, Jeremy Cohen, Diego Ellis-Soto, Shubhi Sharma, <b>Will Rogers</b> & Walter Jetz"
     venue: "Proceedings of the National Academy of Sciences. 2025."
     doi: "https://doi.org/10.1073/pnas.2425582122"
-    paper_pdf: "/repository-name/assets/publications/Lu et al. 2025.pdf"
+    paper_pdf: "/assets/publications/Lu et al. 2025.pdf"
     Published: y
 
   - title: "Examining the interaction between STEM teachers’ preparation program, instructional quality, and persistence in teaching"
     authors: "Danielle Rhemer, <b>Will Rogers</b> & Sherry Southerland"
     venue: "Education Sciences. 2024."
     doi: "https://doi.org/10.3390/educsci14050506"
-    paper_pdf: "/repository-name/assets/publications/Rhemer et al. 2024.pdf"
+    paper_pdf: "/assets/publications/Rhemer et al. 2024.pdf"
     Published: y
 
   - title: "A multi-species evaluation of digital wildlife monitoring using the Sigfox IoT network"
     authors: "Timm Wild, Louis van Schalkwyk, Pauli Viljoen, Georg Heine, Nina Richter, Bernd Vorneweg, Jens Koblitz, Dina Dechmann, <b>Will Rogers<b>, Jesko Partecke, Nils Linek, Tamara Volkmer, Troels Gregersen, Rasmus Havmøller, Kevin Morelle, Andreas Daim, Miriam Wiesner, Kerri Wolter, Wolfgang Fiedler, Roland Kays, Vanessa Ezenwa, Mirko Meboldt & Martin Wikelski"
     venue: "Animal Biotelemetry. 2023."
     doi: "https://doi.org/10.1186/s40317-023-00326-1"
-    paper_pdf: "/repository-name/assets/publications/Wild et al. 2023.pdf"
+    paper_pdf: "/assets/publications/Wild et al. 2023.pdf"
     Published: y
 
   - title: "Epidemiological differences between sexes affect management efficacy in simulated chronic wasting disease systems"
     authors: "<b>Will Rogers<b>, Ellen Brandell, Paul Cross"
     venue: "Journal of Applied Ecology. 2022."
     doi: "https://doi.org/10.1111/1365-2664.14125"
-    paper_pdf: "/repository-name/assets/publications/Rogers et al. 2022.pdf"
+    paper_pdf: "/assets/publications/Rogers et al. 2022.pdf"
     Published: y
 
   - title: "Examination of the interaction between age‐specific predation and chronic disease in the Greater Yellowstone Ecosystem"
     authors: "Ellen Brandell, Paul Cross, Douglas Smith, <b>Will Rogers<b>, Nathan Galloway, Daniel MacNulty, Daniel Stahler, John Treanor & Peter Hudson"
     venue: "Journal of Animal Ecology. 2022."
     doi: "https://doi.org/10.1111/1365-2656.13661"
-    paper_pdf: "/repository-name/assets/publications/Brandell et al. 2022.pdf"
+    paper_pdf: "/assets/publications/Brandell et al. 2022.pdf"
     Published: y
 
   - title: "Juvenile moose stress and nutrition dynamics related to winter ticks, landscape characteristics, climate-mediated factors and survival"
     authors: "Elias Rosenblatt, Jacob DeBow, Joshua Blouin, Therese Donovan, James Murdoch, Scott Creel, <b>Will Rogers<b>, Katherina Gieder, Nick Fortin & Cedric Alexander"
     venue: "Conservation Physiology. 2021."
     doi: "https://doi.org/10.1093/conphys/coab048"
-    paper_pdf: "/repository-name/assets/publications/Rosenblatt et al. 2021.pdf"
+    paper_pdf: "/assets/publications/Rosenblatt et al. 2021.pdf"
     Published: y
 
   - title: "How do infections impact social relationships?"
