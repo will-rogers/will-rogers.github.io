@@ -7,6 +7,7 @@ papers:
     code: "https://github.com/will-rogers/SSD_Paper_Code"
     paper_pdf: "/assets/publications/Rogers et al. 2025.pdf"
     published: y
+    selected: y
 
   - title: "A theoretical framework for scaling ecological niches from individuals to species"
     authors: "Muyang Lu, Scott Yanco, Ben Carlson, Kevin Winner, Jeremy Cohen, Diego Ellis-Soto, Shubhi Sharma, <b>Will Rogers</b> & Walter Jetz"
@@ -30,11 +31,12 @@ papers:
     published: y
 
   - title: "Epidemiological differences between sexes affect management efficacy in simulated chronic wasting disease systems"
-    authors: "<b>Will Rogers<b>, Ellen Brandell, Paul Cross"
+    authors: "<b>Will Rogers</b>, Ellen Brandell, Paul Cross"
     venue: "Journal of Applied Ecology. 2022."
     doi: "https://doi.org/10.1111/1365-2664.14125"
     paper_pdf: "/assets/publications/Rogers et al. 2022.pdf"
     published: y
+    selected: y
 
   - title: "Examination of the interaction between age‐specific predation and chronic disease in the Greater Yellowstone Ecosystem"
     authors: "Ellen Brandell, Paul Cross, Douglas Smith, <b>Will Rogers<b>, Nathan Galloway, Daniel MacNulty, Daniel Stahler, John Treanor & Peter Hudson"
@@ -51,28 +53,31 @@ papers:
     published: y
 
   - title: "How do infections impact social relationships?"
-    authors: "<b>Will Rogers<b>, Vanessa Ezenwa, Gerald Carter & Sebastian Stockmaier"
+    authors: "<b>Will Rogers</b>, Vanessa Ezenwa, Gerald Carter & Sebastian Stockmaier"
     venue: "<em>In review </em>Biology Letters."
     review: y
+    selected: y
 
-  - title: "Seven reasons we need movement-based indicators in global policy"
-    authors: "<b>Will Rogers<b>, Sierra Mattingly, Jenna Kohles, Nils Linek, Hannah Williams, Ivan Lenzi, Georg Wilbs, Marcel Escher, Nina Richter, Louis van Schalkwyk, Vanessa Ezenwa, Martin Wikelski, Dina Dechmann, Timm Wild"
+  - title: "Fine-scale animal proximity detection and localization via multi-sensor
+biologgers"
+    authors: "<b>Will Rogers</b>, Sierra Mattingly, Jenna Kohles, Nils Linek, Hannah Williams, Ivan Lenzi, Georg Wilbs, Marcel Escher, Nina Richter, Louis van Schalkwyk, Vanessa Ezenwa, Martin Wikelski, Dina Dechmann, Timm Wild"
     venue: "<em>In review </em>Movement Ecology."
     doi: "https://www.biorxiv.org/content/10.1101/2025.09.09.674951v1.full"
     review: y
+    selected: y
 
   - title: "Seven reasons we need movement-based indicators in global policy"
-    authors: "Ruth Oliver, Katherine Hébert, Lacey Hughey, Nathan Cooper,..., <b>Will Rogers<b>, ..., Laura Pollock"
+    authors: "Ruth Oliver, Katherine Hébert, Lacey Hughey, Nathan Cooper,..., <b>Will Rogers</b>, ..., Laura Pollock"
     venue: "<em>In review </em>Nature Reviews Biodiversity."
     review: y
 
   - title: "The human aspect of capacity building: Factors shaping mathematics teachers’ implementation of integrated mathematics and computer science curricula"
-    authors: "Ellen Granger, Sherry Southerland, Jessica Smith, <b>Will Rogers<b> & Christine Andrews-Larson"
+    authors: "Ellen Granger, Sherry Southerland, Jessica Smith, <b>Will Rogers</b> & Christine Andrews-Larson"
     venue: "<em>In review </em>International Journal of STEM Education."
     review: y
 
   - title: "High-frequency screening combined with diagnostic testing for control of SARS-CoV-2 in high-density settings: an economic evaluation of resources allocation for public health benefit"
-    authors: "Will Rogers, Manuel Ruiz-Aravena, Dale Hansen, Wyatt Madden, Maureen Kessler, Matthew Fields, Matthew J. Ferrari, Connie Chang, Jayne Morrow, Andrew Hoegh & Raina K. Plowright"
+    authors: "<b>Will Rogers</b>, Manuel Ruiz-Aravena, Dale Hansen, Wyatt Madden, Maureen Kessler, Matthew Fields, Matthew J. Ferrari, Connie Chang, Jayne Morrow, Andrew Hoegh & Raina K. Plowright"
     doi: "https://doi.org/10.1101/2021.03.04.21252949"
     preprint: y
 
