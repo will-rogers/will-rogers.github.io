@@ -3,6 +3,7 @@ experiences:
 - place: "Yale University"
   time: "2021 - 2026"
   title: "Ph.D. Student"
+  advisor: "[Vanessa Ezenwa](https://ezenwalab.yale.edu)"
   subtitle: "[Ezenwa Lab](https://ezenwalab.yale.edu) - [Ecology and Evolutionary Biology](https://eeb.yale.edu)"
   category: "school"
 
@@ -11,3 +12,41 @@ experiences:
   title: "BS"
   subtitle: "Major: Ecology and Conservation Biology, Minors: Genetics, Statistics"
   category: "school"
+
+- place: "Montana State University - Plowright Lab"
+  time: "2020-2021"
+  advisor: "[Raina Plowright](https://bzndiseaselab.org)"
+  subtitle: "Undergraduate Researcher"
+  category: "research"
+
+- place: "U.S.G.S. Northern Rocky Mountain Science Center - Cross Lab"
+  time: "2019-2021"
+  advisor: "[Paul Cross](https://www.usgs.gov/staff-profiles/paul-cross)"
+  subtitle: "Undergraduate Researcher"
+  category: "research"
+
+- place: "University of Georgia - D’Angelo Lab"
+  time: "2019"
+  advisor: "Adam Edge, [Gino D'Angelo](https://warnell.uga.edu/directory/people/gino-dangelo)"
+  subtitle: "White-Tailed Deer Field Technician"
+  category: "field"
+
+- place: "University of Wyoming - Beck Lab"
+  time: "2019"
+  advisor: "[Kurt Smith](https://www.researchgate.net/profile/Kurt-Smith-2)"
+  subtitle: "Greater Sage-Grouse Field Technician"
+  category: "field"
+
+- place: "Montana State University - Creel Lab"
+  time: "2017-2021"
+  advisor: "[Scott Creel](https://www.montana.edu/screel/)"
+  subtitle: "Undergraduate Researcher"
+  category: "research"
+
+- place: "Tall Timbers"
+  time: "2015-2017"
+  advisor: "Aaron Griffiths, [Theron Terhune](https://www.researchgate.net/profile/Theron-Terhune)"
+  subtitle: "Bobwhite Quail and Wild Turkey Field Technician"
+  category: "field"
+
+
