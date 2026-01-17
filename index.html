@@ -71,17 +71,9 @@ title: Home
               <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
             {% endif %}
 
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
-
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
-
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
+            {% if paper.doi %}
+                    <a href="{{ paper.doi }}" class="btn btn-paper" target="_blank">Dot</a>
+                  {% endif %}
 
             {% if paper.code %}
               <a class="button" href="{{ paper.code }}" target="_blank">Code</a>

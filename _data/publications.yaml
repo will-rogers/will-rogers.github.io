@@ -23,7 +23,7 @@ papers:
     Published: y
 
   - title: "A multi-species evaluation of digital wildlife monitoring using the Sigfox IoT network"
-    authors: "Timm Wild, Louis van Schalkwyk, Pauli Viljoen, Georg Heine, Nina Richter, Bernd Vorneweg, Jens Koblitz, Dina Dechmann, <b>Will Rogers<b>, Jesko Partecke, Nils Linek, Tamara Volkmer, Troels Gregersen, Rasmus Havmøller, Kevin Morelle, Andreas Daim, Miriam Wiesner, Kerri Wolter, Wolfgang Fiedler, Roland Kays, Vanessa Ezenwa, Mirko Meboldt & Martin Wikelski"
+    authors: "Timm Wild, Louis van Schalkwyk, Pauli Viljoen, Georg Heine, Nina Richter, Bernd Vorneweg, Jens Koblitz, Dina Dechmann, <b>Will Rogers</b>, Jesko Partecke, Nils Linek, Tamara Volkmer, Troels Gregersen, Rasmus Havmøller, Kevin Morelle, Andreas Daim, Miriam Wiesner, Kerri Wolter, Wolfgang Fiedler, Roland Kays, Vanessa Ezenwa, Mirko Meboldt & Martin Wikelski"
     venue: "Animal Biotelemetry. 2023."
     doi: "https://doi.org/10.1186/s40317-023-00326-1"
     paper_pdf: "/assets/publications/Wild et al. 2023.pdf"
