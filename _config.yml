@@ -1,7 +1,8 @@
 source:      .
 destination: ./_site
 includes:    ./_includes
-baseurl: /will-rogers
+url: "https://will-rogers.github.io"
+baseurl: ""
 
 collections:
   projects:
