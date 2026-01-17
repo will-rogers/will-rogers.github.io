@@ -5,7 +5,7 @@ papers:
     venue: "Ecology Letters. 2025."
     doi: "https://doi.org/10.1111/ele.70279"
     code: "https://github.com/will-rogers/SSD_Paper_Code"
-    paper_pdf: "/repository-name/assets/publications/Rogers et al. 2025.pdf"
+    paper_pdf: "/portfolio/assets/publications/Rogers et al. 2025.pdf"
     Published: y
 
   - title: "A theoretical framework for scaling ecological niches from individuals to species"
