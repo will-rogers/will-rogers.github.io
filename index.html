@@ -47,7 +47,7 @@ title: Home
 <div class="docs-section" id="publications">
   <h4>Publications</h4>
 
-  <p>Most recent publications on <a href="{{ site.data.main_info.google_scholar }}" target="_blank">Google Scholar</a>.<br/>
+  <p>Most recent publications on <a href="{{ https://scholar.google.com/citations?user=TWc4vkkAAAAJ&hl=en&authuser=2 }}" target="_blank">Google Scholar</a>.<br/>
   <sup>‡</sup> indicates equal contribution.
   </p>
 
@@ -97,6 +97,10 @@ title: Home
            <div class="paper-buttons">
             {% if paper.paper_pdf %}
               <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.doi %}
+              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
             {% endif %}
 
             {% if paper.slides %}
