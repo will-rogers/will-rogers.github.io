@@ -316,7 +316,8 @@ title: Home
           <span class="flag">{{ exp.place }}</span>
           <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
         </div>
-        <div class="desc"><b>{{ exp.title }}</b> <br/> {{ exp.subtitle }} <br/> {{ exp.advisor }} </div>
+        <div class="desc"><b>{{ exp.title }}</b> <br/>
+  Advisor: {{ exp.advisor | markdownify }} <br/> {{ exp.subtitle }} </div>
       </div>
     </li>
     {% endfor %}
