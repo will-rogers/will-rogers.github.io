@@ -28,4 +28,4 @@ edges <- edges[edges$node1 %in% nodes$label & edges$node2 %in%
 
 d <- list(nodes = nodes, edges = edges)
 plotNetwork(d$nodes, d$edges, file="/Users/willrogers/Downloads/portfolio/network.html", 
-            fontsize = 15, width = 1000, height = 1000, charge = -100)
+            fontsize = 15, width = 500, height = 500, charge = -10)
