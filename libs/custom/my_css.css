@@ -51,6 +51,21 @@ h4 {
   color: rgba(0, 0, 0, 0.60); }
 .image {
   text-align: center; }
+.section-break {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;}
+.parallax {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  height: 70vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;}
 
 /*  ================ Project styling  ================ */
 .project-container {
