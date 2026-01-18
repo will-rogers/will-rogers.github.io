@@ -66,6 +66,25 @@ h4 {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;}
+  .img-left, .img-right {
+  width: 45%;           /* image width, adjust as needed */
+  margin: 1rem 1.5rem 1rem 0; /* space around image */}
+.img-left img, .img-right img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px; /* optional, soft edges */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* optional, subtle shadow */}
+.img-left {
+  float: left;}
+.img-right {
+  float: right;
+  margin-left: 1.5rem;
+  margin-right: 0;}
+p::after {
+  content: "";
+  display: table;
+  clear: both;}
 
 /*  ================ Project styling  ================ */
 .project-container {
