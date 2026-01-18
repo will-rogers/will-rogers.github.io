@@ -134,7 +134,7 @@ p::after {
   .navbar-spacer {
     display: none; }
   .navbar > .container {
-    width: 100%; }
+    max-width: 1200px; }
   .navbar-list {
     display: flex;
     flex-wrap: wrap;
@@ -154,7 +154,9 @@ p::after {
     margin-right: 35px;
     text-decoration: none;
     line-height: 6.5rem;
-    color: #222; }
+    color: #222; 
+    margin-right: 0; /* important */ 
+    white-space: nowrap; }
   .navbar-link.active {
     color: #33C3F0; }
   .has-docked-nav .navbar {
@@ -165,7 +167,7 @@ p::after {
     display: block; }
   /* Re-overiding the width 100% declaration to match size of % based container */
   .has-docked-nav .navbar > .container {
-    width: 80%; }
+    max-width: 1200px; }
 
   /* Popover */
   .popover.open {
