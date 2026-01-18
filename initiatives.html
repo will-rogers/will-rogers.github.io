@@ -1,83 +1,28 @@
 ---
 layout: default
-title: Projects
+title: Initiatives &
 permalink: /projects/
 ---
 
-
-<!-- ========== PROJECTS ========== 
-<div class="docs-section" id="projects">
-  <h4>Projects</h4>
-
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#projects-selected">Selected</div></li>
-    <li><div class="button" data-ref="#projects-all">All</div></li>
-  </ul>
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="projects-selected">
-      {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
-      {% for project in selected_projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
-            </div>
-          </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="projects-all">
-      {% for project in site.data.projects.projects %}
-        {% assign index_modulo = forloop.index0 | modulo:3 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
-
-          <div class="four columns">
-            <div class="project-container">
-
-                <div class="project-image-container">
-                  <a href="{{ project.url }}">
-                    <img src="{{ project.thumbnail }}" class="u-max-full-width" />
-                  </a>
-                </div>
-
-                <div class="project-caption">
-                  <b>{{ project.title }}</b> <br/>
-                  {{ project.subtitle }}
-                </div>
-
-            </div>
-          </div>
-
-        {% if index_modulo == 2 %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
-
+<div class="docs-section" id="EEIDforum">
+  <h3>EEIDForum Seminar Series</h3>
+  <p>With Paul Cross and Wynne Moss, I am helping to organize a monthly seminar series bringing together researchers under the broad umbrella of EEID. If you are interested, please check out the EEID forum page, register for the seminars, and share with others! The current slate of speakers is here!</p><br>
 </div>
--->
+
+<div class="docs-section" id="MoveBon">
+  <h3>MoveBon</h3>
+  <p>Lead by Lacey Huey .... </p><br>
+</div>
+
+<div class="docs-section" id="MoveBon">
+  <h3>Move Disease Archive</h3>
+  <p>Lead by Dongmin Kim .... </p><br>
+</div>
+
+<div class="docs-section" id="EEIDforum">
+  <h3>Yale Early-Career Researcher Symposium</h3>
+  <p>With Elizabeth Blackmore (EEB) and Yi Ting Chew (YSPH), I am leading a symposium for early-career researchers to present ongoing work with an invited lecture from Dr. Bryan Grenfell. We hope that this grows into a more regional event to serve EEID communities in the region. </p><br>
+</div>
+
 
 
