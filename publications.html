@@ -152,18 +152,6 @@ permalink: /publications/
               <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
             {% endif %}
 
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
           </div>
         </div>
       {% endfor %}
