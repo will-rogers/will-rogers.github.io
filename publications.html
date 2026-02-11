@@ -140,7 +140,7 @@ permalink: /publications/
       {% endfor %}
     </div>
 
-    <div class="tab-pane active" id="papers-prep">
+    <div class="tab-pane" id="papers-prep">
       {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
       {% for paper in prep_papers %}
         <div class="paper">
