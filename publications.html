@@ -140,13 +140,29 @@ permalink: /publications/
       {% endfor %}
     </div>
 
-    <div class="tab-pane" id="papers-prep">
-      {% assign preprint_papers = site.data.publications.papers | where: "prep", "y" %}
-      {% for paper in preprint_papers %}
+    <div class="tab-pane active" id="papers-prep">
+      {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
+      {% for paper in prep_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p>{{ paper.authors }}</p>
           <p><i>{{ paper.venue }}</i></p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+            {% if paper.doi %}
+              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
+            {% endif %}
+
+            {% if paper.code %}
+              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+            {% endif %}
+
+            {% if paper.data %}
+              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+            {% endif %}
 
           </div>
         </div>
