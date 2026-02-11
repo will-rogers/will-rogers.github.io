@@ -139,6 +139,19 @@ permalink: /publications/
       {% endfor %}
     </div>
 
+    <div class="tab-pane" id="papers-prep">
+      {% assign preprint_papers = site.data.publications.papers | where: "prep", "y" %}
+      {% for paper in preprint_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p>{{ paper.authors }}</p>
+          <p><i>{{ paper.venue }}</i></p>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
     <div class="tab-pane" id="papers-all">
       {% for paper in site.data.publications.papers %}
         <div class="paper">
