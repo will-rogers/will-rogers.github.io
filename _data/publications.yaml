@@ -93,7 +93,7 @@ papers:
   - title: "Fine-scale animal proximity detection and localization via multi-sensor
 biologgers"
     authors: "<b>Will Rogers</b>, Sierra Mattingly, Jenna Kohles, Nils Linek, Hannah Williams, Ivan Lenzi, Georg Wilbs, Marcel Escher, Nina Richter, Louis van Schalkwyk, Vanessa Ezenwa, Martin Wikelski, Dina Dechmann, Timm Wild"
-    venue: "Major Revisions <b>Movement Ecology</b>."
+    venue: "<em>Major Revisions</em> <b>Movement Ecology</b>."
     doi: "https://www.biorxiv.org/content/10.1101/2025.09.09.674951v1.full"
     prep: "n"
     review: "y"
