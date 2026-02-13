@@ -19,8 +19,8 @@ permalink: /publications/
     <li><div class="button" data-ref="#papers-published">Published</div></li>
     <li><div class="button" data-ref="#papers-review">In Review</div></li>
     <li><div class="button" data-ref="#papers-preprint">Preprints</div></li>
-    <li><div class="button" data-ref="#papers-prep">In Prep</div></li>
     <li><div class="button" data-ref="#papers-all">All</div></li>
+    <li><div class="button" data-ref="#papers-prep">In Prep</div></li>
   </ul>
 
   <div class="tab-content">
@@ -140,25 +140,8 @@ permalink: /publications/
       {% endfor %}
     </div>
 
-    <div class="tab-pane" id="papers-prep">
-      {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
-      {% for paper in prep_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
     <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers %}
+      {% for paper in site.data.publications.papers | where: "prep", "n" %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p class="authors">{{ paper.authors }}</p>
@@ -196,6 +179,24 @@ permalink: /publications/
         </div>
       {% endfor %}
     </div>
+
+    <div class="tab-pane" id="papers-prep">
+      {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
+      {% for paper in prep_papers %}
+        <div class="paper">
+          <p class="title"><b>{{ paper.title }}</b></p>
+          <p class="authors">{{ paper.authors }}</p>
+          <p class="venue">{{ paper.venue }}</p>
+           <div class="paper-buttons">
+            {% if paper.paper_pdf %}
+              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
+            {% endif %}
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
   </div>
 </div>
 
