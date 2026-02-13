@@ -141,7 +141,8 @@ permalink: /publications/
     </div>
 
     <div class="tab-pane" id="papers-all">
-      {% for paper in site.data.publications.papers | where: "prep", "n" %}
+      {% assign all_papers = site.data.publications.papers | where: "prep", "n" %}
+      {% for paper in all_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
           <p class="authors">{{ paper.authors }}</p>
