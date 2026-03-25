@@ -141,7 +141,7 @@ permalink: /publications/
     </div>
 
     <div class="tab-pane" id="papers-all">
-      {% assign all_papers = site.data.publications.papers | where_exp: "prep != 'y'" %}
+      {% assign all_papers = site.data.publications.papers | where_exp: "paper", "paper.prep != 'y'" %}
       {% for paper in all_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
@@ -182,7 +182,7 @@ permalink: /publications/
     </div>
 
     <div class="tab-pane" id="papers-prep">
-      {% assign prep_papers = site.data.publications.papers | where: "paper", "paper.prep != 'y'" %}
+      {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
       {% for paper in prep_papers %}
         <div class="paper">
           <p class="title"><b>{{ paper.title }}</b></p>
