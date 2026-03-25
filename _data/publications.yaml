@@ -4,6 +4,7 @@ papers:
     authors: "<b>Will Rogers</b>, Vanessa Ezenwa, Gerald Carter & Sebastian Stockmaier"
     venue: "<b>Biology Letters</b>. 2026."
     paper_pdf: "/assets/publications/Rogers et al. 2026.pdf"
+    doi: "https://doi.org/10.1098/rsbl.2025.0720"
     review: "n"
     selected: "y"
     preprint: "n"
