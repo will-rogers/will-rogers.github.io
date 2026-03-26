@@ -19,7 +19,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="{{ '/libs/external/skeleton/normalize.css' | relative_url }}">
@@ -55,42 +57,49 @@
 
   <div class="container">
 
-    <section class="header">
+    <section class="site-header">
       <div class="row">
         <div class="three columns">
           <a href="{{ '/' | relative_url }}">
-            <img class="u-max-full-width"
+            <img class="u-max-full-width profile-image"
                  src="{{ '/assets/profile-pics/head_long.png' | relative_url }}"
                  alt="Will Rogers profile photo">
           </a>
         </div>
 
         <div class="nine columns main-description">
+          <p class="eyebrow">Behavioral Ecology and Disease Ecology</p>
           <h1>{{ site.data.main_info.name }}</h1>
-          <p>{{ site.data.main_info.title }}</p>
-          <p>{{ site.data.main_info.email }}</p>
-          <p>{{ site.data.main_info.address }}</p>
+          <p class="title-line">{{ site.data.main_info.title }}</p>
+          <p class="meta-line">{{ site.data.main_info.email }}</p>
+          <p class="meta-line">{{ site.data.main_info.address }}</p>
 
-          <p>
-            <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor:pointer">
+          <div class="header-links">
+            <a class="header-chip" href="{{ '/publications/' | prepend: site.baseurl }}">Publications</a>
+            <a class="header-chip" href="{{ '/cv/' | prepend: site.baseurl }}">CV</a>
+            <a class="header-chip" href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          </div>
+
+          <p class="social-links">
+            <a href="{{ site.data.main_info.bsky }}" target="_blank" rel="noopener noreferrer" aria-label="Bluesky profile">
               <i class="fa-brands fa-bluesky"></i>
-            </span>
+            </a>
 
-            <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor:pointer">
+            <a href="{{ site.data.main_info.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
               <i class="fa-brands fa-github"></i>
-            </span>
+            </a>
 
-            <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor:pointer">
+            <a href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile">
               <i class="ai ai-google-scholar"></i>
-            </span>
+            </a>
 
-            <span onclick="window.open('{{ site.data.main_info.orcid }}')" style="cursor:pointer">
+            <a href="{{ site.data.main_info.orcid }}" target="_blank" rel="noopener noreferrer" aria-label="ORCID profile">
               <i class="fa-brands fa-orcid"></i>
-            </span>
+            </a>
 
-            <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor:pointer">
+            <a href="{{ site.data.main_info.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
               <i class="fa-brands fa-linkedin"></i>
-            </span>
+            </a>
           </p>
         </div>
       </div>
@@ -102,7 +111,7 @@
       <div class="container">
         <ul class="navbar-list">
           <li class="navbar-item">
-            <a class="navbar-link" href="{{ '/index.html#bio' | relative_url }}">Home</a>
+            <a class="navbar-link" href="{{ '/index.html#home' | relative_url }}">Home</a>
           </li>
           <li class="navbar-item">
             <a class="navbar-link" href="{{ '/bio/' | prepend: site.baseurl }}">Bio</a>
@@ -140,22 +149,22 @@
         <div class="four columns">{{ site.data.main_info.name }}</div>
         <div class="four columns">{{ site.data.main_info.email }}</div>
 
-        <div class="four columns">
-          <span onclick="window.open('{{ site.data.main_info.bsky }}')" style="cursor:pointer">
+        <div class="four columns footer-links">
+          <a href="{{ site.data.main_info.bsky }}" target="_blank" rel="noopener noreferrer" aria-label="Bluesky profile">
             <i class="fa-brands fa-bluesky"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.github }}')" style="cursor:pointer">
+          </a>
+          <a href="{{ site.data.main_info.github }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
             <i class="fa-brands fa-github"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.google_scholar }}')" style="cursor:pointer">
+          </a>
+          <a href="{{ site.data.main_info.google_scholar }}" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile">
             <i class="ai ai-google-scholar"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.orcid }}')" style="cursor:pointer">
+          </a>
+          <a href="{{ site.data.main_info.orcid }}" target="_blank" rel="noopener noreferrer" aria-label="ORCID profile">
             <i class="fa-brands fa-orcid"></i>
-          </span>
-          <span onclick="window.open('{{ site.data.main_info.linkedin }}')" style="cursor:pointer">
+          </a>
+          <a href="{{ site.data.main_info.linkedin }}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
             <i class="fa-brands fa-linkedin"></i>
-          </span>
+          </a>
         </div>
       </div>
     </div>
