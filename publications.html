@@ -3,201 +3,263 @@ layout: default
 title: Publications
 permalink: /publications/
 ---
+{% assign published_papers = site.data.publications.papers | where: "published", "y" %}
+{% assign review_papers = site.data.publications.papers | where: "review", "y" %}
+{% assign preprint_papers = site.data.publications.papers | where_exp: "paper", "paper.preprint == 'y' and paper.review != 'y' and paper.published != 'y'" %}
+{% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
 
-
-<!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
+  <div class="publications-page">
+    <header class="pub-header">
+      <h4>Publications</h4>
+      <p class="pub-note">
+        My latest publications can be found on my <a href="{{ site.data.main_info.google_scholar }}">Google Scholar</a> or <a href="{{ site.data.main_info.orcid }}">ORCID</a>. <sup>§</sup> indicates supervised student work.
+      </p>
 
-  <h4>Publications</h4>
+      <nav class="pub-nav" aria-label="Publication sections">
+        <a href="#published-work">Published</a>
+        <span class="pub-nav-sep">/</span>
+        <a href="#in-review">In Review</a>
+        <span class="pub-nav-sep">/</span>
+        <a href="#preprints">Preprints</a>
+        <span class="pub-nav-sep">/</span>
+        <a href="#in-prep">In Prep</a>
+      </nav>
+    </header>
+  </div>
+</div>
 
-  <p>This may not be the most complete or up-to-date so please check out my <a href="https://scholar.google.com/citations?user=TWc4vkkAAAAJ&hl=en&authuser=2">Google Scholar</a> or <a href="https://orcid.org/0000-0001-9899-8064">ORCID</a>.<br/>
-  <sup>‡</sup> equal contribution, <sup>§</sup> supervised student<br/>
-  </p>
+<div class="docs-section pub-section" id="published-work">
+  <div class="publications-page">
+    <h5 class="pub-section-title">Published Articles</h5>
 
-  <ul class="tab-nav">
-    <li><div class="button active" data-ref="#papers-selected">Selected</div></li>
-    <li><div class="button" data-ref="#papers-published">Published</div></li>
-    <li><div class="button" data-ref="#papers-review">In Review</div></li>
-    <li><div class="button" data-ref="#papers-preprint">Preprints</div></li>
-    <li><div class="button" data-ref="#papers-all">All</div></li>
-    <li><div class="button" data-ref="#papers-prep">In Prep</div></li>
-  </ul>
-
-  <div class="tab-content">
-    <div class="tab-pane active" id="papers-selected">
-      {% assign selected_papers = site.data.publications.papers | where: "selected", "y" %}
-      {% for paper in selected_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="papers-published">
-      {% assign published_papers = site.data.publications.papers | where: "published", "y" %}
+    <div class="pub-list">
       {% for paper in published_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
+        <article class="pub-item">
+          <div class="pub-item-grid">
+            <p class="pub-number">{{ forloop.rindex }}.</p>
+            <div class="pub-entry">
+              {% assign paper_year = paper.year | default: "" | replace: ".", "" | strip %}
+              {% assign paper_venue = paper.venue | default: "" | strip %}
+              <p class="pub-citation">
+                <span class="pub-citation-authors">{{ paper.authors }}.</span>
+                {% if paper_year != "" %}
+                  <span class="pub-citation-year">({{ paper_year }})</span>
+                {% endif %}
+                <span class="pub-citation-title">
+                  {% if paper.title contains '?' or paper.title contains '!' %}
+                    {{ paper.title }}
+                  {% else %}
+                    {{ paper.title }}.
+                  {% endif %}
+                </span>
+                {% if paper_venue != "" %}
+                  {% if paper_venue contains '<' %}
+                    <span class="pub-venue">{{ paper.venue }}</span>
+                  {% else %}
+                    <span class="pub-journal">{{ paper.venue }}</span>.
+                  {% endif %}
+                {% endif %}
+                {% if paper.doi or paper.paper_pdf or paper.code or paper.data or paper.slides or paper.poster or paper.video %}
+                  <span class="pub-citation-links">
+                    {% if paper.doi %}
+                      {% if paper.doi contains 'doi.org' %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+                      {% else %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">Link</a>
+                      {% endif %}
+                    {% endif %}
+                    {% if paper.paper_pdf %}
+                      <a href="{{ paper.paper_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
+                    {% endif %}
+                    {% if paper.code %}
+                      <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+                    {% endif %}
+                    {% if paper.data %}
+                      <a href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+                    {% endif %}
+                    {% if paper.slides %}
+                      <a href="{{ paper.slides | relative_url }}" target="_blank" rel="noopener noreferrer">Slides</a>
+                    {% endif %}
+                    {% if paper.poster %}
+                      <a href="{{ paper.poster | relative_url }}" target="_blank" rel="noopener noreferrer">Poster</a>
+                    {% endif %}
+                    {% if paper.video %}
+                      <a href="{{ paper.video }}" target="_blank" rel="noopener noreferrer">Video</a>
+                    {% endif %}
+                  </span>
+                {% endif %}
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
+  </div>
+</div>
 
-    <div class="tab-pane" id="papers-review">
-      {% assign review_papers = site.data.publications.papers | where: "review", "y" %}
+<div class="docs-section pub-section" id="in-review">
+  <div class="publications-page">
+    <h5 class="pub-section-title">In Review</h5>
+
+    <div class="pub-list">
       {% for paper in review_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
+        <article class="pub-item">
+          <div class="pub-item-grid">
+            <p class="pub-number">{{ forloop.rindex }}.</p>
+            <div class="pub-entry">
+              {% assign paper_year = paper.year | default: "" | replace: ".", "" | strip %}
+              {% assign paper_venue = paper.venue | default: "" | strip %}
+              <p class="pub-citation">
+                <span class="pub-citation-authors">{{ paper.authors }}.</span>
+                {% if paper_year != "" %}
+                  <span class="pub-citation-year">({{ paper_year }})</span>
+                {% endif %}
+                <span class="pub-citation-title">
+                  {% if paper.title contains '?' or paper.title contains '!' %}
+                    {{ paper.title }}
+                  {% else %}
+                    {{ paper.title }}.
+                  {% endif %}
+                </span>
+                {% if paper_venue != "" %}
+                  {% if paper_venue contains '<' %}
+                    <span class="pub-venue">{{ paper.venue }}</span>
+                  {% else %}
+                    <span class="pub-journal">{{ paper.venue }}</span>.
+                  {% endif %}
+                {% endif %}
+                {% if paper.doi or paper.paper_pdf or paper.code or paper.data %}
+                  <span class="pub-citation-links">
+                    {% if paper.doi %}
+                      {% if paper.doi contains 'doi.org' %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+                      {% else %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">Link</a>
+                      {% endif %}
+                    {% endif %}
+                    {% if paper.paper_pdf %}
+                      <a href="{{ paper.paper_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
+                    {% endif %}
+                    {% if paper.code %}
+                      <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+                    {% endif %}
+                    {% if paper.data %}
+                      <a href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+                    {% endif %}
+                  </span>
+                {% endif %}
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
+  </div>
+</div>
 
-    <div class="tab-pane" id="papers-preprint">
-      {% assign preprint_papers = site.data.publications.papers | where: "preprint", "y" %}
+<div class="docs-section pub-section" id="preprints">
+  <div class="publications-page">
+    <h5 class="pub-section-title">Preprints</h5>
+
+    <div class="pub-list">
       {% for paper in preprint_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
+        <article class="pub-item">
+          <div class="pub-item-grid">
+            <p class="pub-number">{{ forloop.rindex }}.</p>
+            <div class="pub-entry">
+              {% assign paper_year = paper.year | default: "" | replace: ".", "" | strip %}
+              {% assign paper_venue = paper.venue | default: "" | strip %}
+              <p class="pub-citation">
+                <span class="pub-citation-authors">{{ paper.authors }}.</span>
+                {% if paper_year != "" %}
+                  <span class="pub-citation-year">({{ paper_year }})</span>
+                {% endif %}
+                <span class="pub-citation-title">
+                  {% if paper.title contains '?' or paper.title contains '!' %}
+                    {{ paper.title }}
+                  {% else %}
+                    {{ paper.title }}.
+                  {% endif %}
+                </span>
+                {% if paper_venue != "" %}
+                  {% if paper_venue contains '<' %}
+                    <span class="pub-venue">{{ paper.venue }}</span>
+                  {% else %}
+                    <span class="pub-journal">{{ paper.venue }}</span>.
+                  {% endif %}
+                {% endif %}
+                {% if paper.doi or paper.paper_pdf or paper.code or paper.data %}
+                  <span class="pub-citation-links">
+                    {% if paper.doi %}
+                      {% if paper.doi contains 'doi.org' %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">DOI</a>
+                      {% else %}
+                        <a href="{{ paper.doi }}" target="_blank" rel="noopener noreferrer">Link</a>
+                      {% endif %}
+                    {% endif %}
+                    {% if paper.paper_pdf %}
+                      <a href="{{ paper.paper_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
+                    {% endif %}
+                    {% if paper.code %}
+                      <a href="{{ paper.code }}" target="_blank" rel="noopener noreferrer">Code</a>
+                    {% endif %}
+                    {% if paper.data %}
+                      <a href="{{ paper.data }}" target="_blank" rel="noopener noreferrer">Data</a>
+                    {% endif %}
+                  </span>
+                {% endif %}
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
+  </div>
+</div>
 
-    <div class="tab-pane" id="papers-all">
-      {% assign all_papers = site.data.publications.papers | where_exp: "paper", "paper.prep != 'y'" %}
-      {% for paper in all_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
+<div class="docs-section pub-section" id="in-prep">
+  <div class="publications-page">
+    <h5 class="pub-section-title">In Preparation</h5>
 
-            {% if paper.doi %}
-              <a class="button" href="{{ paper.doi }}" target="_blank">Link</a>
-            {% endif %}
-
-            {% if paper.slides %}
-              <a class="button" href="{{ paper.slides | prepend: site.baseurl }}" target="_blank">Slides</a>
-            {% endif %}
-
-            {% if paper.poster %}
-              <a class="button" href="{{ paper.poster | prepend: site.baseurl }}" target="_blank">Poster</a>
-            {% endif %}
-
-            {% if paper.video %}
-              <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
-            {% endif %}
-
-            {% if paper.code %}
-              <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
-            {% endif %}
-
-            {% if paper.data %}
-              <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
-            {% endif %}
-
-          </div>
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="tab-pane" id="papers-prep">
-      {% assign prep_papers = site.data.publications.papers | where: "prep", "y" %}
+    <div class="pub-list">
       {% for paper in prep_papers %}
-        <div class="paper">
-          <p class="title"><b>{{ paper.title }}</b></p>
-          <p class="authors">{{ paper.authors }}</p>
-          <p class="venue">{{ paper.venue }}</p>
-           <div class="paper-buttons">
-            {% if paper.paper_pdf %}
-              <a class="button" href="{{ paper.paper_pdf | prepend: site.baseurl }}" target="_blank">Paper</a>
-            {% endif %}
-
+        <article class="pub-item">
+          <div class="pub-item-grid">
+            <p class="pub-number">{{ forloop.rindex }}.</p>
+            <div class="pub-entry">
+              {% assign paper_year = paper.year | default: "" | replace: ".", "" | strip %}
+              {% assign paper_venue = paper.venue | default: "" | strip %}
+              <p class="pub-citation">
+                <span class="pub-citation-authors">{{ paper.authors }}.</span>
+                {% if paper_year != "" %}
+                  <span class="pub-citation-year">({{ paper_year }})</span>
+                {% endif %}
+                <span class="pub-citation-title">
+                  {% if paper.title contains '?' or paper.title contains '!' %}
+                    {{ paper.title }}
+                  {% else %}
+                    {{ paper.title }}.
+                  {% endif %}
+                </span>
+                {% if paper_venue != "" %}
+                  {% if paper_venue contains '<' %}
+                    <span class="pub-venue">{{ paper.venue }}</span>
+                  {% else %}
+                    <span class="pub-journal">{{ paper.venue }}</span>.
+                  {% endif %}
+                {% endif %}
+                {% if paper.paper_pdf %}
+                  <span class="pub-citation-links">
+                    <a href="{{ paper.paper_pdf | relative_url }}" target="_blank" rel="noopener noreferrer">PDF</a>
+                  </span>
+                {% endif %}
+              </p>
+            </div>
           </div>
-        </div>
+        </article>
       {% endfor %}
     </div>
-
   </div>
 </div>
 

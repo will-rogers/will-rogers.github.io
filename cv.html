@@ -8,27 +8,41 @@ permalink: /cv/
 <div class="docs-section" id="resume">
   <h4>Vitæ</h4>
 
-  <p>Full CV in <a href={{ "/assets/cv/cv_web.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.</p>
+  <p>
+    Full CV in <a href={{ "/assets/cv/cv_web.pdf" | prepend: site.baseurl }} target="_blank">PDF</a>.
+  </p>
+  <p class="cv-intro">
+    A compact view of the path into my current work, from early field experience to quantitative training and disease ecology research.
+  </p>
 
-  <!-- The Timeline -->
-  <ul class="timeline">
+  <div class="career-timeline">
     {% for exp in site.data.experience.experiences %}
-    <li>
-      {% if exp.category == "right" %}
-      <div class="direction-r">
-      {% else %}
-      <div class="direction-l">
-      {% endif %}
-        <div class="flag-wrapper">
-          <span class="flag">{{ exp.place }}</span>
-          <span class="time-wrapper"><span class="time">{{ exp.time }}</span></span>
-        </div>
-        <div class="desc">
-          <b>{{ exp.title }}</b><br/>
-            <span class="advisor">Advisor: {{ exp.advisor | markdownify }} {{ exp.subtitle }}</span>
+      <article class="career-entry">
+        <div class="career-time">{{ exp.time }}</div>
+        <div class="career-body">
+          <div class="career-marker" aria-hidden="true"></div>
+          <div class="career-card">
+            <p class="career-place">{{ exp.place }}</p>
+            <p class="career-role">{{ exp.title | default: exp.subtitle }}</p>
+            {% if exp.subtitle and exp.title %}
+              <p class="career-subtitle">{{ exp.subtitle }}</p>
+            {% endif %}
+            {% if exp.advisor %}
+              <p class="career-advisor">Advisor: {{ exp.advisor | markdownify | remove: '<p>' | remove: '</p>' }}</p>
+            {% endif %}
+            <!--{% if exp.focus %}
+              <p class="career-focus">{{ exp.focus }}</p>
+            {% endif %}
+            {% if exp.tags %}
+              <div class="career-tags">
+                {% for tag in exp.tags %}
+                  <span class="career-tag">{{ tag }}</span>
+                {% endfor %}
+              </div>
+            {% endif %} -->
           </div>
-      </div>
-    </li>
+        </div>
+      </article>
     {% endfor %}
-  </ul>
+  </div>
 </div>

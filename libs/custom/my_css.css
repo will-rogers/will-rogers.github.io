@@ -1,3 +1,11 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 h4 {
   letter-spacing: .1rem; 
 }
@@ -166,6 +174,296 @@ p::after {
   padding: 3px;
 }
 
+/* ================ CV trajectory ================ */
+.cv-intro {
+  max-width: 680px;
+  color: #5a5a5a;
+  font-size: 1.2rem;
+  line-height: 1.75;
+}
+
+.career-timeline {
+  position: relative;
+  max-width: 760px;
+  margin-top: 2.2rem;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  left: 10.4rem;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  width: 3px;
+  background: linear-gradient(to bottom, rgba(58, 49, 94, 0.15), rgba(58, 49, 94, 0.8), rgba(58, 49, 94, 0.15));
+}
+
+.career-entry {
+  display: grid;
+  grid-template-columns: 8.8rem minmax(0, 1fr);
+  gap: 2.2rem;
+  align-items: start;
+  margin-bottom: 1.7rem;
+}
+
+.career-time {
+  padding-top: 0.25rem;
+  color: #4b3ca0;
+  font-size: 1.02rem;
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+  text-align: right;
+}
+
+.career-body {
+  position: relative;
+  min-width: 0;
+}
+
+.career-marker {
+  position: absolute;
+  left: -1.45rem;
+  top: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid #4b2b91;
+  box-sizing: border-box;
+}
+
+.career-card {
+  background: #fbfbfb;
+  border: 1px solid #ececf1;
+  border-radius: 14px;
+  padding: 1rem 1.15rem 1rem 1.2rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.career-place,
+.career-role,
+.career-subtitle,
+.career-advisor,
+.career-focus {
+  margin: 0;
+}
+
+.career-place {
+  color: #222;
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+}
+
+.career-role {
+  color: #303030;
+  font-size: 1.16rem;
+  font-weight: 700;
+  margin-bottom: 0.28rem;
+}
+
+.career-subtitle,
+.career-advisor {
+  color: #5f5f5f;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.career-advisor {
+  margin-bottom: 0.45rem;
+}
+
+.career-advisor p,
+.career-advisor a {
+  display: inline;
+}
+
+.career-focus {
+  color: #444;
+  font-size: 1.03rem;
+  line-height: 1.65;
+}
+
+.career-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.8rem;
+}
+
+.career-tag {
+  display: inline-block;
+  padding: 0.24rem 0.55rem;
+  border-radius: 999px;
+  background: #f0eef9;
+  color: #4b3ca0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
+}
+
+/* ================ Publications page refresh ================ */
+.publications-page {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.pub-header {
+  margin-bottom: 0.5rem;
+}
+
+.pub-intro {
+  font-size: 1.75rem;
+  line-height: 1.85;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.pub-note,
+.pub-section-description {
+  font-size: 1.42rem;
+  line-height: 1.75;
+  color: #666;
+}
+
+.pub-note {
+  margin-bottom: 1.8rem;
+}
+
+.pub-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  align-items: center;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: 0.14rem;
+  text-transform: uppercase;
+}
+
+.pub-nav a {
+  color: #444;
+  text-decoration: none;
+}
+
+.pub-nav a:hover {
+  color: #111;
+}
+
+.pub-nav-sep {
+  color: #bbb;
+}
+
+.pub-section {
+  padding-top: 3.2rem;
+}
+
+.pub-section-title {
+  font-size: 2.25rem;
+  font-weight: 600;
+  margin-bottom: 0.55rem;
+  letter-spacing: 0.02rem;
+}
+
+.pub-section-description {
+  margin-bottom: 1.65rem;
+}
+
+.pub-list {
+  margin: 0;
+}
+
+.pub-item {
+  padding: 1.6rem 0 1.9rem;
+}
+
+.pub-item-grid {
+  display: grid;
+  grid-template-columns: 3.2rem minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.pub-number {
+  margin: 0;
+  color: #8a8a8a;
+  font-size: 1.35rem;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.pub-entry {
+  min-width: 0;
+}
+
+.pub-item:first-child {
+  padding-top: 0.25rem;
+}
+
+.pub-item-featured {
+  padding-top: 0.1rem;
+  padding-bottom: 2.1rem;
+}
+
+.pub-citation {
+  margin: 0;
+}
+
+.pub-citation {
+  font-size: 1.5rem;
+  line-height: 1.85;
+  color: #2f2f2f;
+}
+
+.pub-item-featured .pub-citation {
+  font-size: 1.62rem;
+}
+
+.pub-citation-authors {
+  color: #222;
+}
+
+.pub-citation-year {
+  color: #222;
+}
+
+.pub-citation-title {
+  color: #222;
+}
+
+.pub-journal {
+  font-style: italic;
+  font-weight: 700;
+  color: #2f2f2f;
+}
+
+.pub-venue {
+  font-size: 1.5rem;
+  line-height: 1.85;
+  color: #404040;
+}
+
+.pub-citation-links {
+  margin-left: 0.45rem;
+  color: #666;
+}
+
+.pub-citation-links a {
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.pub-citation-links a:hover {
+  color: #111;
+  text-decoration: underline;
+}
+
+.pub-citation-links a + a::before {
+  content: " \00b7  ";
+  color: #999;
+}
+
 /* Larger than phone */
 @media (min-width: 550px) {
   .header {
@@ -318,6 +616,66 @@ p::after {
 }
 
 @media (max-width: 749px) {
+  .career-timeline::before {
+    left: 0.45rem;
+  }
+
+  .career-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .career-time {
+    text-align: left;
+    padding-left: 1.6rem;
+  }
+
+  .career-marker {
+    left: 0;
+    top: 0.95rem;
+  }
+
+  .career-card {
+    margin-left: 1.6rem;
+  }
+
+  .publications-page {
+    max-width: 100%;
+  }
+
+  .pub-nav {
+    gap: 0.45rem;
+    font-size: 0.92rem;
+    letter-spacing: 0.1rem;
+  }
+
+  .pub-citation,
+  .pub-item-featured .pub-citation,
+  .pub-journal,
+  .pub-venue,
+  .pub-note,
+  .pub-section-description {
+    font-size: 1.2rem;
+  }
+
+  .pub-intro {
+    font-size: 1.5rem;
+  }
+
+  .pub-section-title {
+    font-size: 1.95rem;
+  }
+
+  .pub-item-grid {
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    gap: 0.9rem;
+  }
+
+  .pub-number {
+    font-size: 1.15rem;
+  }
+
   .parallax {
     background-attachment: scroll;
     height: 40vh;
@@ -397,4 +755,3 @@ p::after {
     border-color: #222;
   }
 }
-
